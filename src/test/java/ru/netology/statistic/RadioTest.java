@@ -118,17 +118,18 @@ public class RadioTest {
     }
 
 
-//    @Test
-//    public void testSetWaveValidValue_1() {
-//        Radio radio = new Radio();
-//        radio.setWave(1);
-//
-//        int expected = 1;
-//        int actual = radio.getWave();
-//
-//        assertEquals(expected, actual);
-//    }
-//
+    @Test
+    public void testRadioStantions() {
+        Radio radio = new Radio(20);
+
+        radio.setWave(9);
+
+        int expected = 9;
+        int actual = radio.getWave();
+
+        assertEquals(expected, actual);
+    }
+
 //    @Test
 //    public void testSetWaveInvalidValueNegative() {
 //        Radio radio = new Radio();

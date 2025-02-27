@@ -3,9 +3,18 @@ package ru.netology.statistic;
 public class Radio {
     private int wave;
     private int volume;
+    private int maxStantion;
+
+    public Radio(){
+        this.maxStantion = 35;
+    }
+
+    public Radio(int stantionsCount){
+        this.maxStantion = stantionsCount-1;
+    }
 
     public void next() {
-        if (wave != 9) {
+        if (wave != maxStantion) {
             wave++;
         } else {
             wave = 0;
@@ -16,7 +25,7 @@ public class Radio {
         if (wave != 0) {
             wave--;
         } else {
-            wave = 9;
+            wave = maxStantion;
         }
     }
 
@@ -40,7 +49,7 @@ public class Radio {
         if (wave < 0) {
             return;
         }
-        if (wave > 9) {
+        if (wave > maxStantion) {
             return;
         }
         this.wave = wave;
