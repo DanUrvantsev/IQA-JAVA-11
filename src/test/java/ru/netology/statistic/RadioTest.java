@@ -14,9 +14,8 @@ public class RadioTest {
             "-1,0",
             "0,0",
             "1,1",
-            "8,8",
-            "9,9",
-            "10,0",
+            "11,0",
+            "10,10",
     })
     public void testSetWaveRadio(int wave, int expected) {
         Radio radio = new Radio();
@@ -50,7 +49,7 @@ public class RadioTest {
             "0,1",
             "8,9",
             "4,5",
-            "9,0",
+            "10,0",
     })
     public void testSetNextRadio(int stantion, int expected) {
         Radio radio = new Radio();
@@ -65,7 +64,7 @@ public class RadioTest {
 
     @ParameterizedTest
     @CsvSource({
-            "0,9",
+            "0,10",
             "1,0",
             "5,4",
             "9,8",
@@ -120,11 +119,11 @@ public class RadioTest {
 
     @Test
     public void testRadioStantions() {
-        Radio radio = new Radio(20);
+        Radio radio = new Radio(28);
 
-        radio.setWave(9);
+        radio.setWave(22);
 
-        int expected = 9;
+        int expected = 22;
         int actual = radio.getWave();
 
         assertEquals(expected, actual);

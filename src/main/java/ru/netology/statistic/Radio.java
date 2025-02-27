@@ -6,7 +6,7 @@ public class Radio {
     private int maxStantion;
 
     public Radio(){
-        this.maxStantion = 35;
+        this.maxStantion = 10;
     }
 
     public Radio(int stantionsCount){
